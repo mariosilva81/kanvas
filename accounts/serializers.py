@@ -1,7 +1,6 @@
 from rest_framework.serializers import ModelSerializer
 from .models import Account
 from rest_framework.validators import UniqueValidator
-from django.contrib.auth.password_validation import validate_password
 
 
 class AccountSerializer(ModelSerializer):
@@ -20,9 +19,6 @@ class AccountSerializer(ModelSerializer):
             "password": {"write_only": True},
         }
 
-    def validate_password(self, value):
-        validate_password(value, self.instance)
-        return value
 
     def create(self, validated_data: dict) -> Account:
         is_superuser = validated_data.get("is_superuser", False)
