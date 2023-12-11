@@ -19,7 +19,6 @@ class AccountSerializer(ModelSerializer):
             "password": {"write_only": True},
         }
 
-
     def create(self, validated_data: dict) -> Account:
         is_superuser = validated_data.get("is_superuser", False)
         if is_superuser:
