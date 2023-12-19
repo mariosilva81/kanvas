@@ -32,7 +32,7 @@ Vide arquivo `requirements.txt` na raiz do projeto.
 1. Clone o repositório: 
 
 ```bash
-git@github.com:mariosilva81/kanvas.git
+git clone git@github.com:mariosilva81/kanvas.git
 ```
 
 2. Navegue até o diretório do projeto.
